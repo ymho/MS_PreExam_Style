@@ -1,0 +1,95 @@
+\usepackage[top=30truemm, bottom=27truemm, left=18truemm, right=18truemm]{geometry}
+\pagestyle{empty}
+
+\usepackage{graphicx}
+\usepackage{luatexja}
+\usepackage{changepage}
+
+% フォント関係
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\usepackage{luatexja-fontspec}
+\setmainjfont[
+    YokoFeatures       = {JFM=jlreq},
+    TateFeatures       = {JFM=jlreqv},
+    BoldFont           = MS-Gothic,
+    BoldFeatures       = {FakeBold=2},
+    ItalicFont         = MS-Mincho,
+    ItalicFeatures     = {FakeSlant=0.33},
+    BoldItalicFont     = MS-Gothic,
+    BoldItalicFeatures = {FakeBold=2, FakeSlant=0.33}
+]{MS-Mincho}
+\setsansjfont[
+    YokoFeatures       = {JFM=jlreq},
+    TateFeatures       = {JFM=jlreqv},
+    BoldFont           = MS-Gothic,
+    BoldFeatures       = {FakeBold=2},
+    ItalicFont         = MS-Gothic,
+    ItalicFeatures     = {FakeSlant=0.33},
+    BoldItalicFont     = MS-Gothic,
+    BoldItalicFeatures = {FakeBold=2, FakeSlant=0.33}
+]{MS-Gothic}
+
+% 章の設定
+% https://github.com/abenori/jlreq/blob/master/README-ja.md
+\RenewBlockHeading{section}{1}{
+    font={\normalfont},
+    before_lines=1,
+}
+\RenewBlockHeading{subsection}{1}{
+    font={\normalfont},
+    before_lines=1,
+}
+\RenewBlockHeading{subsubsection}{1}{
+    font={\normalfont}
+}
+\SetBlockHeadingSpaces{
+    {_section{before_lines=1},_subsection{before_lines=0}}
+}
+% \renewcommand{\thesection}{\arabic{section}.}
+
+% 行間
+\renewcommand{\baselinestretch}{0.72}
+
+% 2段組時のコラム間
+\setlength{\columnsep}{7mm}
+
+\jlreqsetup{
+    % 図表のキャプション
+    caption_font=\normalsize,
+    caption_label_font=\normalsize
+}
+
+% タイトル
+\newcommand{\Title}[2]{%
+    {\large #1\\#2}
+}
+% 執筆者
+\newcommand{\Authors}[2]{\\\normalsize#1\\#2\par}
+
+% 所属
+% \newcommand{\Affiliations}[1]{#1\par}
+
+% Eメール
+% \newcommand{\Emails}[1]{\hspace*{2\zw}e-mail: #1\par}
+
+% アブストラクト
+\newcommand{\Abstruct}[1]{
+    \bigskip
+    \begin{adjustwidth}{7mm}{7mm}
+        \fontsize{11pt}{12pt}\selectfont
+        \hspace{\parindent}#1\par
+    \end{adjustwidth}
+}
+
+\newcommand{\header}[1]{\twocolumn[#1\bigskip]}
+
+
+% その他，必要にd応じて追記する
+\usepackage{amsmath,amssymb,amsthm,epic,eepic,multicol}
+\usepackage{bm}
+\usepackage[usenames]{color}
+\usepackage[unicode=true]{hyperref}
+\usepackage{url}
+\usepackage{multirow}
