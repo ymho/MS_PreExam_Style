@@ -15,7 +15,7 @@ Lualatex, jlreq クラスで動作確認しています。
 - /Applications/Microsoft Word.app/Contents/Resources/DFonts/msgothic.ttc
 - /Applications/Microsoft Word.app/Contents/Resources/DFonts/msmincho.ttc
 
-を開いて本体にインストールしてあげる必要があります。もちろん他のフォントを使っても OK です。Windows は動作環境がなく確かめていませんが，lualatex-fontspec パッケージに上記フォントの定義があるので，苦労しないはずです。
+を開いて本体にインストールしてあげるなどの方法で，これらのフォントが使えるようにする必要があります。もちろん他のフォントを使っても OK です。Windows は動作環境がなく確かめていませんが，lualatex-fontspec パッケージに上記フォントの定義があるので，苦労しないはずです。
 
 ## 要望
 
